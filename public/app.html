@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app = "ysApp">
+<head>
+<p> register </p>
+<script src= 
+"https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"> </script> 
+<script src="/controllers/controller.js"> </script>
+<script src="/controllers/signup.js"> </script>
+<script src="/controllers/login.js"> </script>
+</head>
+<body>
+
+<div ng-controller="ysSignUpController">
+<ng class= "signup">
+<form ng-submit= "signup()">
+<ng hide = "loggedIn">
+<input id="username" type="text" ng-model= "username" placeholder = "username">
+<input id= "password"type="text" ng-model= "password" placeholder = "password">
+<button type="submit"> Make an Account </button>
+</form>
+</div>
+
+
+
+<div ng-controller = "ysLoginController">
+<form ng-submit= "login()">
+<input id="username" type="text" ng-model= "username" placeholder = "username">
+<input id= "password"type="text" ng-model= "password" placeholder = "password">
+<button type="submit"> Login </button>
+</form>
+</div>   
+
+<div id = "addfunds">
+<form ng-submit= "addFunds()">
+<input id="money" type="text" ng-model= "money" placeholder = "add $ to your account">
+<button type= "submit"> Add funds </button>
+</form>
+</div>
+
+
+
+</body>
+</html>
+
+
